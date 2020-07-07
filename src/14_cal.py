@@ -6,14 +6,18 @@ https://docs.python.org/3.6/library/calendar.html
 Write a program that accepts user input of the form
   `14_cal.py [month] [year]`
 and does the following:
+
  - If the user doesn't specify any input, your program should
    print the calendar for the current month. The 'datetime'
    module may be helpful for this.
+
  - If the user specifies one argument, assume they passed in a
    month and render the calendar for that month of the current year.
+
  - If the user specifies two arguments, assume they passed in
    both the month and the year. Render the calendar for that
    month and year.
+
  - Otherwise, print a usage statement to the terminal indicating
    the format that your program expects arguments to be given.
    Then exit the program.
@@ -30,3 +34,30 @@ it should use today’s date to get the month and year.
 import sys
 import calendar
 from datetime import datetime
+
+# print(calendar.weekheader(2))
+# print(calendar.month(2020, 7))
+# print(datetime.today().year)
+# print(datetime.today().month)
+
+
+# year = datetime.today().year
+# month = datetime.today().month 
+
+def newCal(a , b ):
+  print(calendar.month(a, b))
+
+
+# Flow: 
+# Start up program
+
+users_month_choice = int(input("enter desired month: "))
+users_year_choice = int(input("enter desired year: "))
+# User will specify their choice in month and year 
+# Use Python's 'input' function
+
+newCal(users_year_choice, users_month_choice)
+#Program will build a calendar based off of the inputs of the user
+
+
+
