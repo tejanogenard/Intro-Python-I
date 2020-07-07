@@ -4,9 +4,11 @@
 def is_even(x):
     if x % 2 == 0:
         print(f"{x} is an even number")
+        return True
     elif x % 1 == 0:
         print(f"{x} is an Odd number")
-
+        return False
+        
 # Read a number from the keyboard
 num = input("Enter a number: ")
 num = int(num)
