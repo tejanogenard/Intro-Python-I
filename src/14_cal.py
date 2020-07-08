@@ -32,32 +32,28 @@ it should use today’s date to get the month and year.
 """
 
 import sys
-import calendar
-from datetime import datetime
-
-# print(calendar.weekheader(2))
-# print(calendar.month(2020, 7))
-# print(datetime.today().year)
-# print(datetime.today().month)
-
-
-# year = datetime.today().year
-# month = datetime.today().month 
-
-def newCal(a , b ):
-  print(calendar.month(a, b))
-
-
-# Flow: 
-# Start up program
-
-users_month_choice = int(input("enter desired month: "))
-users_year_choice = int(input("enter desired year: "))
-# User will specify their choice in month and year 
-# Use Python's 'input' function
-
-newCal(users_year_choice, users_month_choice)
-#Program will build a calendar based off of the inputs of the user
+import calendar 
+from datetime import datetime 
 
 
 
+#FLOW: 
+#initialize calendar variables 
+year = datetime.today().year
+month = datetime.today().month
+arguements = len(sys.argv)
+
+def buildCal( a=year, b=month ):
+  print(calendar.month(year, month))
+#check for sys.arg 
+if arguements == 1:
+  pass
+
+elif arguements == 2:
+  month = int(sys.argv[1])
+
+elif arguements == 3:
+  month = int(sys.argv[1])
+  year = int(sys.argv[2])
+#build calendar
+buildCal()
