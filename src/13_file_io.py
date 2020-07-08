@@ -31,4 +31,4 @@ with open('bar.txt', 'w') as wf:
     wf.write('This is on the written file\n')
     wf.write('This newline is also on the written file\n')
     wf.write('This newline is ON THE WRITTEN FILE \n')
-    wf.close
+    wf.closed
